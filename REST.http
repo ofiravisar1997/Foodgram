@@ -1,0 +1,19 @@
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+    "name": "Ofir Avisar",
+    "password": "171997",
+    "confirmPassword": "171997",
+    "email": "OfirAvisar97@gmail.com"
+}
+
+###
+
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "OfirAvisar97@gmail.com"
+    ,"password": "171997"
+}

@@ -1,0 +1,103 @@
+.post {
+  background-color: white;
+  border: 1px solid #acadb0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+
+  &__header {
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+
+    &__name {
+      font-family: var(--font);
+      font-size: 1.6rem;
+      margin-left: 1rem;
+    }
+
+    &__img {
+      height: 5rem;
+      padding: 0.2rem;
+      border-radius: 300px;
+      border: 1px solid #282c34;
+    }
+  }
+
+  &__img {
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__bottomContent {
+    padding: 1rem 1rem;
+
+    &__icons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+
+      :last-child {
+        margin-left: auto;
+      }
+      svg {
+        font-size: 2.4rem;
+        transform: scale(0.95);
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__likesCount {
+      font-weight: 700;
+      font-family: var(--font);
+      font-size: 1.4rem;
+    }
+
+    &__recipe {
+      margin-top: 0.3rem;
+      font-family: var(--font);
+      font-size: 1.4rem;
+      span {
+        font-weight: 700;
+        margin-right: 0.4rem;
+
+      }
+    }
+
+    &__createdAt {
+      font-family: var(--font);
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #acadb0;
+    }
+
+    &__AddMessage {
+      border-top: 1px solid #acadb0;
+      margin-top: 0.4rem;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+
+      input {
+        font-family: var(--font);
+        flex: 1;
+        font-size: inherit;
+      }
+
+      button {
+        font-family: var(--font);
+        color: #ee5454;
+        background-color: transparent;
+        font-size: inherit;
+      }
+    }
+  }
+}

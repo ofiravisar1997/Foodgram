@@ -1,0 +1,149 @@
+
+.container {
+  justify-content: space-between;
+  align-items: center;
+  display:flex;
+  background-color: white;
+  padding: 1rem 6rem;
+  border-bottom: 1px solid #acadb0;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:1000;
+  max-height: 10vh;
+}
+
+.logo {
+  font-family: var(--font);
+  font-size: 2.4rem;
+}
+
+.search_div {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+
+  &__input {
+    padding: 1rem 1rem;
+    background: #e7e7e7;
+    border-radius: 0.2rem;
+    transition: all 0.15s ease-in-out;
+    width: 90%;
+    border: 1px solid #acadb0;
+
+    &:hover, &:focus {
+      width: 100%;
+      box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@keyframes SlideDown {
+  0%{
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes Shake {
+  20%{
+transform: scale(1.05);
+  }
+
+  100%{
+    transform: scale(0.95);
+
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+
+  svg {
+    transform: scale(0.95);
+  }
+  svg:hover {
+
+    animation: Shake 0.6s infinite cubic-bezier(.59,.43,.22,.87) backwards;
+  }
+}
+
+.profileDiv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  width: fit-content;
+
+  &:hover {
+    .profileDiv_dropdown {
+      display: flex;
+    }
+  }
+
+  &_dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    height: fit-content;
+    top: 100%;
+
+    &_menu {
+      gap: 1rem;
+      margin-top: 2rem;
+      width: 100%;
+      background: white;
+      height: fit-content;
+      top: 8rem;
+      border: 1px solid #acadb0;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      animation: SlideDown 0.3s backwards ease-in-out;
+
+
+      &_item {
+        font-size: 1.4rem;
+        font-family: var(--font);
+        padding: 1rem 2rem;
+        transition: all 0.15s ease-in-out;
+
+        &:last-child {
+          color: rgb(253, 65, 65);
+        }
+
+        &:hover {
+          background-color: #e7e7e7;
+        }
+      }
+    }
+  }
+
+  &_img {
+    height: 5rem;
+    padding: 0.2rem;
+    border-radius: 300px;
+    border: 1px solid #282c34;
+  }
+
+  &_name {
+    font-family: var(--font);
+    font-size: 1.6rem;
+  }
+}

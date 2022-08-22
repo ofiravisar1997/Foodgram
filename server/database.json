@@ -1,0 +1,9 @@
+{
+    "dev" : {
+        "driver": "pg",
+        "user": "postgres",
+        "password": "171997",
+        "host": "localhost",
+        "database": "foodgram"
+    }
+}
